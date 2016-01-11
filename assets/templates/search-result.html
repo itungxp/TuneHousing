@@ -1,0 +1,28 @@
+<thtop></thtop>
+<div class="main-content" layout="row" layout-align="center center" layout-fill>
+	<div layout-gt-md="row" layout="column" layout-margin layout-fill>
+		<div flex="50" flex-sm="100">
+		    <md-grid-list
+                    md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-lg="2"
+                    md-gutter="10px" md-row-height="1:1">
+                <md-grid-tile ng-repeat="h in houses" md-colspan-sm="1">
+                    <th-house-card model="h" layout-fill></th-house-card>
+                </md-grid-tile>
+              </md-grid-list>
+		</div>
+		<div flex="50" flex-sm="100">
+            <ui-gmap-google-map center="mapOption.center" zoom="mapOption.zoom">
+                <ui-gmap-marker ng-repeat="h in houses" idKey="h.id" coords="h.coords" options="markerOptions" click="onMarkerClicked(h)">
+                    <ui-gmap-window show="h.showWindow" layout-fill>
+                        <div class="gm-iw gm-sm">
+                            <div class="gm-photos"><img ng-src="{{h.image}}" ng-hide="{{!h.image}}"/></div>
+                            <div class="gm-title">{{h.name}}</div>
+                            <div class="gm-basicinfo">Price: &#36;{{h.price}}</div>
+                        </div>
+                    </ui-gmap-window>
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+		</div>
+	</div>
+</div>
+<thbottom></thbottom>

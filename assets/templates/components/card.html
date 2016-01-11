@@ -1,0 +1,22 @@
+<md-card layout-fill>
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{model.name}}</span>
+        <span class="md-subhead">{{model.description}}</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content layout="row" layout-align="space-between">
+      <div class="md-media"><img layout-fill ng-src="{{model.image}}" ng-show="model.image" /></div>
+      <md-card-actions layout="column">
+        <md-button class="md-icon-button">
+          <md-icon>bookmark_border</md-icon>
+        </md-button>
+        <md-button class="md-icon-button">
+          <md-icon>call</md-icon>
+        </md-button>
+        <md-button class="md-icon-button">
+          <md-icon>share</md-icon>
+        </md-button>
+      </md-card-actions>
+    </md-card-content>
+</md-card>

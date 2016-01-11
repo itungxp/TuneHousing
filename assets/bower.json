@@ -1,0 +1,10 @@
+{
+  "name": "tunehousing",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-material": "~1.0.0",
+    "angular-route": "~1.4.8",
+    "angular-google-maps": "",
+    "jquery": "~2.1.3"
+  }
+}

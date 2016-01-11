@@ -1,0 +1,17 @@
+<div layout="row" layout-align="center center" layout-fill>
+	<md-whiteframe layout="column" flex="50" layout-padding>
+		<md-content>
+			<form layout="row" layout-sm="column" layout-margin>
+				<md-input-container md-no-float flex="80">
+					<input type="text" autofocus="true" ng-model="search.keywords" placeholder="Search for a house, department type or address.">
+				</md-input-container>
+				<div flex="20">
+				    <md-button class="md-raised md-primary" ng-click="search()">Search</md-button>
+				    <md-switch ng-model="search.type" ng-true-value="'Rent'" ng-false-value="'Buy'" ng-init="search.type='Rent'">
+				    {{ search.type }}
+				    </md-switch>
+				</div>
+			</form>
+		</md-content>
+	</md-whiteframe>
+</div>

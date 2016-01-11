@@ -1,0 +1,17 @@
+.logo {
+    height: 45px !important;
+    margin: 0 20px;
+}
+
+.angular-google-map-container {
+    height: 800px;
+}
+
+.main-content {
+    background-color: #ECEFF1;
+}
+
+.top-panel {
+    background-color: #607D8B;
+    color: #ECEFF1;
+}
